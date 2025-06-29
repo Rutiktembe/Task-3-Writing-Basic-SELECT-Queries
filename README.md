@@ -25,11 +25,12 @@ SQL> select *
 
 14 rows selected.
 
-2.so basically this is my table where i do the query to select specific columns.
+2.so basically this is my table where i do the query to select specific columns
+
 
 SQL> SELECT ENAME,JOB,SAL
   2  FROM EMP;
-  
+
 ENAME      JOB              SAL
 ---------- --------- ----------
 SMITH      CLERK            800
@@ -45,9 +46,7 @@ TURNER     SALESMAN        1500
 ADAMS      CLERK           1100
 JAMES      CLERK            950
 FORD       ANALYST         3000
-MILLER     CLERK           1300   
-
-14 rows selected.
+MILLER     CLERK           1300
 
 SO HERE I WANT TO DISPLAY ONLY NAME,DESIGNATION AND SAL COLUMN AND THE ABOVE ARE THE RESULTS.
 
@@ -218,7 +217,7 @@ KING       PRESIDENT       5000
 ALLEN      SALESMAN        1600
 TURNER     SALESMAN        1500
 MARTIN     SALESMAN        1250
-WARD       SALESMAN        1250
+WARD       SALESMAN        1250                                             
 
 ORDER CLAUSE is used to SORT the values.
 By Default OrderBy clause executes in ascending order.
