@@ -4,7 +4,7 @@ SELECT it is a statement which is used to retrieve the data from the database by
 1.Use SELECT * and specific columns
 
 SQL> select * 
-  2  from emp;
+    from emp;
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
@@ -29,7 +29,7 @@ SQL> select *
 
 
 SQL> SELECT ENAME,JOB,SAL
-  2  FROM EMP;
+    FROM EMP;
 
 ENAME      JOB              SAL
 ---------- --------- ----------
@@ -53,16 +53,16 @@ SO HERE I WANT TO DISPLAY ONLY NAME,DESIGNATION AND SAL COLUMN AND THE ABOVE ARE
 3.NOW I AM USING WHERE CLAUSE FOR SOME OPERATIONS 
 
 SQL> SELECT JOB
-  2  FROM EMP
-  3  WHERE ENAME='BLAKE';
+    FROM EMP
+    WHERE ENAME='BLAKE';
 
 JOB
 ---------
 MANAGER
 
 SQL> SELECT *
-  2  FROM EMP
-  3  WHERE JOB='MANAGER';
+    FROM EMP
+    WHERE JOB='MANAGER';
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
@@ -74,16 +74,16 @@ SQL> SELECT *
 
      
 SQL> SELECT *
-  2  FROM EMP 
-  3  WHERE JOB='CLERK' AND DEPTNO='10';
+    FROM EMP 
+    WHERE JOB='CLERK' AND DEPTNO='10';
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 SQL> SELECT *
-  2  FROM EMP 
-  3  WHERE SAL>1000 AND DEPTNO=30 AND JOB='MANAGER';
+    FROM EMP 
+    WHERE SAL>1000 AND DEPTNO=30 AND JOB='MANAGER';
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
@@ -94,8 +94,8 @@ AND operators only returns through if the both condition gets satisfied, We used
 5.OR OPERATOR
 
 SQL> SELECT *
-  2  FROM EMP
-  3  WHERE JOB='PRESIDENT' OR JOB='ANALYST' OR JOB='CLERK';
+    FROM EMP
+    WHERE JOB='PRESIDENT' OR JOB='ANALYST' OR JOB='CLERK';
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
@@ -109,8 +109,8 @@ SQL> SELECT *
 7 rows selected.
 
 SQL> SELECT * 
-  2  FROM EMP
-  3  WHERE JOB='MANAGER' AND (DEPTNO=10 OR DEPTNO=30);
+    FROM EMP
+    WHERE JOB='MANAGER' AND (DEPTNO=10 OR DEPTNO=30);
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
@@ -122,8 +122,8 @@ OR operator returns through if atleast one condition gets satisfied.
 6.Now am using like and between operator for opeartions which are known as special operators in SQL.
 
 SQL> SELECT ENAME
-  2  FROM EMP
-  3  WHERE ENAME LIKE '%R';
+    FROM EMP
+    WHERE ENAME LIKE '%R';
 
 ENAME
 ----------
@@ -131,8 +131,8 @@ TURNER
 MILLER
 
 SQL> SELECT ENAME
-  2  FROM EMP 
-  3  WHERE ENAME LIKE '%S%';
+    FROM EMP 
+    WHERE ENAME LIKE '%S%';
 
 ENAME
 ----------
@@ -147,16 +147,16 @@ The LIKE operator is used to match the pattern with special characters like % an
 7.Between operator 
 
 SQL> SELECT *
-  2  FROM EMP
-  3  WHERE HIREDATE BETWEEN '01-JAN-82' AND '31-DEC-82';
+    FROM EMP
+    WHERE HIREDATE BETWEEN '01-JAN-82' AND '31-DEC-82';
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
       7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
 
 SQL> SELECT *
-  2  FROM EMP
-  3  WHERE HIREDATE BETWEEN '01-JAN-81'AND '31-DEC-83';
+    FROM EMP
+    WHERE HIREDATE BETWEEN '01-JAN-81'AND '31-DEC-83';
 
      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
 ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
@@ -176,9 +176,9 @@ BETWEEN OPERATOR which is used for whenever we have a Range.
 8.ORDER BY CLAUSE
 
 SQL>  SELECT ENAME,SAL*12 AS ANNUALSAL,SAL*6 AS MIDTERM
-  2   FROM EMP
-  3   WHERE DEPTNO IS NOT NULL
-  4   ORDER BY SAL*6 ASC;
+     FROM EMP
+     WHERE DEPTNO IS NOT NULL
+     ORDER BY SAL*6 ASC;
 
 ENAME       ANNUALSAL    MIDTERM
 ---------- ---------- ----------
@@ -199,8 +199,8 @@ KING            60000      30000
 
 
 SQL> SELECT ENAME,JOB,SAL
-  2  FROM EMP
-  3  ORDER BY JOB ASC,SAL DESC;
+    FROM EMP
+    ORDER BY JOB ASC,SAL DESC;
 
 ENAME      JOB              SAL
 ---------- --------- ----------
